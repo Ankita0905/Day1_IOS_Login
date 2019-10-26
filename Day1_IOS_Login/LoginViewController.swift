@@ -21,8 +21,14 @@ class LoginViewController: UIViewController {
 
     @IBAction func btnLoginClick(_ sender: UIButton)
     {
+        if txtUserName.text=="admin" && txtUserPassword.text=="admin@123"
+        {
         let uname=txtUserName.text!
         print("Hello\(uname)")
+    }
+        else{
+            print("invalid username or password")
+        }
     }
     
 }
