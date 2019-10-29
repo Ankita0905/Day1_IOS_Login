@@ -23,11 +23,21 @@ class LoginViewController: UIViewController {
     {
         if txtUserName.text=="admin" && txtUserPassword.text=="admin@123"
         {
+            
         let uname=txtUserName.text!
         print("Hello \(uname)")
     }
         else{
-            print("invalid username or password")
+            let alert = UIAlertController(title: "Wrong Username Or Password", message: "change username or password", preferredStyle: .alert)
+
+            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
+            alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: {action
+                in
+                print("Cancle clicked")
+            }))
+
+            self.present(alert, animated: true)
+//            print("invalid username or password")
         }
     }
     

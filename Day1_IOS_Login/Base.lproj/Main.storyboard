@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
+        <!--Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Day1_IOS_Login" customModuleProvider="target" sceneMemberID="viewController">
@@ -57,9 +57,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Sign Up"/>
-                                <connections>
-                                    <segue destination="rcL-hr-Jb1" kind="show" id="7rp-NI-Tk4"/>
-                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter User name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xWk-CA-SDK">
                                 <rect key="frame" x="43" y="376" width="314" height="30"/>
@@ -71,7 +68,13 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="IQZ-No-EoZ"/>
+                    <navigationItem key="navigationItem" title="Login" id="IQZ-No-EoZ">
+                        <barButtonItem key="rightBarButtonItem" title="Sign Up" id="dgo-at-K29">
+                            <connections>
+                                <segue destination="rcL-hr-Jb1" kind="show" id="rrW-dw-5fa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="txtUserName" destination="xWk-CA-SDK" id="cJj-gb-wfs"/>
                         <outlet property="txtUserPassword" destination="7NJ-id-LxU" id="QqN-f0-Jqa"/>
@@ -81,10 +84,10 @@
             </objects>
             <point key="canvasLocation" x="973.91304347826099" y="-1771.2053571428571"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Sign Up-->
         <scene sceneID="Y9U-CI-Bjn">
             <objects>
-                <viewController id="rcL-hr-Jb1" customClass="SecondViewController" customModule="Day1_IOS_Login" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Sign Up" id="rcL-hr-Jb1" customClass="SecondViewController" customModule="Day1_IOS_Login" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9af-mj-ce8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,22 +110,50 @@
                                 <color key="minimumTrackTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="maximumTrackTintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="thumbTintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="hSlider:" destination="rcL-hr-Jb1" eventType="valueChanged" id="z9p-HG-Bxj"/>
+                                </connections>
                             </slider>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tkv-WI-6Nh">
                                 <rect key="frame" x="38" y="442" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="onTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="thumbTintColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="switch:" destination="rcL-hr-Jb1" eventType="valueChanged" id="okc-sm-M86"/>
+                                </connections>
                             </switch>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="hZd-Ua-Ybn">
                                 <rect key="frame" x="38" y="563" width="94" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="stepper:" destination="rcL-hr-Jb1" eventType="valueChanged" id="2dU-so-QPY"/>
+                                </connections>
                             </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xy3-kp-uny">
+                                <rect key="frame" x="161" y="563" width="71" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSI-xa-Qus">
+                                <rect key="frame" x="176" y="659" width="56" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="25"/>
+                                <state key="normal" title="Alert"/>
+                                <connections>
+                                    <action selector="btnAlert:" destination="rcL-hr-Jb1" eventType="touchUpInside" id="Xx0-Qc-IjO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="HJu-3H-K2R"/>
                     </view>
-                    <navigationItem key="navigationItem" id="1Kg-Cs-bxI"/>
+                    <navigationItem key="navigationItem" title="Sign Up" id="1Kg-Cs-bxI"/>
+                    <connections>
+                        <outlet property="lblStepper" destination="Xy3-kp-uny" id="5Q9-JE-Huz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="exv-Q1-Tic" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
