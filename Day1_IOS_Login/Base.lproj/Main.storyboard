@@ -157,7 +157,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="exv-Q1-Tic" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1837.68115942029" y="-1771.2053571428571"/>
+            <point key="canvasLocation" x="1954" y="-2117"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="aau-Z8-qY5">
+            <objects>
+                <viewController storyboardIdentifier="homeVC" id="1kg-Az-BxJ" customClass="HomeViewController" customModule="Day1_IOS_Login" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l29-xx-obd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xsb-mg-Csq">
+                                <rect key="frame" x="52" y="157" width="301" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="WA3-Ns-pOV"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblWelcome" destination="Xsb-mg-Csq" id="isn-Q9-hrV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kV6-lx-LR6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1953.6231884057972" y="-1300.4464285714284"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ih7-Yv-W9Z">

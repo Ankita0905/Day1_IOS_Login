@@ -21,24 +21,37 @@ class LoginViewController: UIViewController {
 
     @IBAction func btnLoginClick(_ sender: UIButton)
     {
-        if txtUserName.text=="admin" && txtUserPassword.text=="admin@123"
-        {
-            
-        let uname=txtUserName.text!
-        print("Hello \(uname)")
-    }
-        else{
-            let alert = UIAlertController(title: "Wrong Username Or Password", message: "change username or password", preferredStyle: .alert)
-
-            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
-            alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: {action
-                in
-                print("Cancle clicked")
-            }))
-
-            self.present(alert, animated: true)
-//            print("invalid username or password")
+        let sb=UIStoryboard(name: "Main", bundle: nil)
+        if #available(iOS 13.0, *) {
+            let homeVC=sb.instantiateViewController(identifier: "homeVC") as! HomeViewController
+            let unm=txtUserName.text!
+            homeVC.name=unm
+            //self.present(homeVC,animated: true,completion: nil)
+            navigationController?.pushViewController(homeVC, animated: true)
+        } else {
+            // Fallback on earlier versions
         }
+        
+        
+        
+//        if txtUserName.text=="admin" && txtUserPassword.text=="admin@123"
+//        {
+//
+//        let uname=txtUserName.text!
+//        print("Hello \(uname)")
+//    }
+//        else{
+//            let alert = UIAlertController(title: "Wrong Username Or Password", message: "change username or password", preferredStyle: .alert)
+//
+//            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
+//            alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: {action
+//                in
+//                print("Cancle clicked")
+//            }))
+
+//            self.present(alert, animated: true)
+//            print("invalid username or password")
+//        }
     }
     
 }

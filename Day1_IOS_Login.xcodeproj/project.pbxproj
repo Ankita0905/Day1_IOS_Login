@@ -12,6 +12,7 @@
 		9BA51C8E2364F97200235964 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BA51C8C2364F97200235964 /* Main.storyboard */; };
 		9BA51C902364F98600235964 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BA51C8F2364F98600235964 /* Assets.xcassets */; };
 		9BA51C932364F98600235964 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BA51C912364F98600235964 /* LaunchScreen.storyboard */; };
+		E014996C2367BECE0064DC6E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E014996B2367BECE0064DC6E /* HomeViewController.swift */; };
 		E08C473723679EAA00656A49 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08C473623679EAA00656A49 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		9BA51C8F2364F98600235964 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9BA51C922364F98600235964 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9BA51C942364F98600235964 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E014996B2367BECE0064DC6E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E08C473623679EAA00656A49 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +65,7 @@
 				9BA51C912364F98600235964 /* LaunchScreen.storyboard */,
 				9BA51C942364F98600235964 /* Info.plist */,
 				E08C473623679EAA00656A49 /* SecondViewController.swift */,
+				E014996B2367BECE0064DC6E /* HomeViewController.swift */,
 			);
 			path = Day1_IOS_Login;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				E08C473723679EAA00656A49 /* SecondViewController.swift in Sources */,
 				9BA51C8B2364F97200235964 /* LoginViewController.swift in Sources */,
 				9BA51C892364F97200235964 /* AppDelegate.swift in Sources */,
+				E014996C2367BECE0064DC6E /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
