@@ -20,20 +20,23 @@ class HomeViewController: UIViewController {
         }
         
         navigationItem.hidesBackButton=true
-        
-        // Do any additional setup after loading the view.
+        addLogoutButton()
+         // Do any additional setup after loading the view.
     }
     
-//    private func addLogoutButton()
-//    {
-//        let btnLogout=UIBarButtonItem(title: "Logout", style: .done, target: self, action: #selector(logout()))
-//    }
-//    
-//    @objc
-//    func logout()
-//    {
-//        
-//    }
+    private func addLogoutButton()
+    {
+        let btnLogout=UIBarButtonItem(title: "Logout", style: .done, target: self, action: #selector(HomeViewController.logout(sender:)))
+        
+        navigationItem.rightBarButtonItem=btnLogout
+    }
+    
+    @objc
+    func logout(sender: UIBarButtonItem)
+    {
+        print("logout")
+        navigationController?.popViewController(animated: true)
+    }
         
     /*
     // MARK: - Navigation
